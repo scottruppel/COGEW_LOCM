@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cogew-locm"
+version = "0.1.0"
+description = "CogEW-LOCM demo: gap-free noise-to-DRFM transition on 32-channel spectral graph"
+readme = "CogEW_LOCM_demo_PRD.md"
+requires-python = ">=3.10"
+dependencies = [
+    "locm",
+    "jax>=0.4.20",
+    "jaxlib>=0.4.20",
+    "equinox>=0.11.0",
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+rl = [
+    "gymnasium>=0.29",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

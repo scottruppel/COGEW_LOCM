@@ -1,0 +1,20 @@
+{
+  "locm_mean_max_Q": 0.10000000000000005,
+  "conv_mean_max_Q": 0.3500000000000001,
+  "transition_window_half_width_ms": 0.2,
+  "locm_mean_max_Q_window": 0.10000000000000005,
+  "conv_mean_max_Q_window": 0.3500000000000001,
+  "locm_mean_min_power_db_window": -22.29020952260259,
+  "conv_mean_min_power_db_window": 1.2175240633611222,
+  "locm_ci95_max_Q_window": [
+    0.10000000000000005,
+    0.10000000000000005
+  ],
+  "conv_ci95_max_Q_window": [
+    0.3500000000000001,
+    0.3500000000000001
+  ],
+  "adapt_time_ms": 5.0,
+  "eval_duration_ms": 10.0,
+  "n_episodes": 100
+}

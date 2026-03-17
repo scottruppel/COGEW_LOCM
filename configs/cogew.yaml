@@ -1,0 +1,46 @@
+# CogEW-LOCM demo config (PRD §6.3)
+
+# Spectral coupling graph
+n_channels: 32
+freq_range_ghz: [2.0, 18.0]
+spectral_adjacency_weight: 1.0
+next_neighbor_weight: 0.5
+hardware_contention_weight: -0.5
+threat_band_weight: 2.0
+
+# LOCM-EW model (obs/action dims; block params in LOCM defaults unless extended)
+r: 32
+n_blocks: 2
+obs_dim: 64
+action_dim: 32
+gamma_max: 10.0
+omega_init: 1000.0
+alpha: 0.1
+
+# Threat model
+radar_freq_ghz: 9.5
+radar_bandwidth_mhz: 50
+alpha_acquire: 5.0
+alpha_degrade: 10.0
+adaptation_threshold: 0.3
+conventional_gap_us: 50
+
+# Training
+bc_epochs: 50
+bc_lr: 0.001
+bc_expert_episodes: 200
+rl_episodes: 1000
+rl_lr: 0.0003
+rl_curriculum_stages: 3
+episode_duration_ms: 500
+macro_step_us: 10
+radar_adapt_time_min_ms: 50
+radar_adapt_time_max_ms: 200
+
+# Evaluation
+eval_episodes: 100
+seed: 42
+
+# Paths (relative to project root)
+data_dir: data/cogew
+experiment_dir: experiments/cogew_demo
